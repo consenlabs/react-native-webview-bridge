@@ -71,7 +71,7 @@ var WebViewBridge = React.createClass({
     };
   },
 
-  
+
   componentWillMount: function() {
     DeviceEventEmitter.addListener("webViewBridgeMessage", (body) => {
       const { onBridgeMessage } = this.props;
@@ -234,4 +234,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = {default: WebViewBridge};
+export default WebViewBridge;

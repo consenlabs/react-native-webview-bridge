@@ -120,7 +120,7 @@ public class WebViewBridgeManager extends ReactWebViewManager {
         if (ReactBuildConfig.DEBUG && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(true);
         }
-
+        webView.getSettings().setDomStorageEnabled(true);
         webView.setWebChromeClient(new ReactWebChromeClient());
         webView.addJavascriptInterface(new JavascriptBridge(webView), "WebViewBridge");
         webView.addJavascriptInterface(new StatusBridge(reactContext, webView), "StatusBridge");
